@@ -1,5 +1,6 @@
 package com.vamsi.geofencing
 
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.Context
 import android.content.ContextWrapper
@@ -30,6 +31,7 @@ class GeofenceHelper(base: Context?) : ContextWrapper(base) {
             .build()
     }
 
+    @SuppressLint("UnspecifiedImmutableFlag")
     @JvmName("getPendingIntent1")
     fun getPendingIntent(): PendingIntent? {
         if (pendingIntent != null) {
